@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Architects+Daughter&family=Bangers&family=Black+Ops+One&family=Bruno+Ace+SC&family=Bungee+Spice&family=Cabin+Sketch&family=Caveat&family=Creepster&family=Dancing+Script&family=East+Sea+Dokdo&family=Eater&family=Ewert&family=Fredericka+the+Great&family=Great+Vibes&family=Henny+Penny&family=Homemade+Apple&family=Instrument+Serif&family=Italianno&family=Jacques+Francois+Shadow&family=Kristi&family=Libre+Barcode+39+Text&family=Liu+Jian+Mao+Cao&family=Londrina+Outline&family=Love+Ya+Like+A+Sister&family=Loved+by+the+King&family=MedievalSharp&family=Monoton&family=Monsieur+La+Doulaise&family=Mountains+of+Christmas&family=Nabla&family=Nanum+Gothic&family=Nunito+Sans&family=Orbitron&family=Pirata+One&family=Press+Start+2P&family=Rajdhani&family=Rampart+One&family=Rubik+80s+Fade&family=Rubik+Burned&family=Rubik+Iso&family=Rubik+Maze&family=Rubik+Microbe&family=Rubik+Moonrocks&family=Rubik+Pixels&family=Rubik+Puddles&family=Rubik+Storm&family=Rubik+Vinyl&family=Rye&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Slackey&family=Tilt+Prism&family=UnifrakturMaguntia&family=Yanone+Kaffeesatz&display=swap');
+
+body {
+    font-family: 'Love Ya Like A Sister', sans-serif;
+    background: linear-gradient(284deg, orange, gold, darkorange);
+}
+
+.button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    z-index: 10;
+    color: goldenrod;
+}
+
+.blurred {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    filter: url(#goo);
+}
+
+.blurred::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(113deg, rgb(34, 1, 1), darkred);
+    border-radius: 100%;
+    transition: 1.5s cubic-bezier(0, 2, 0.61, -0.05);
+}
+
+.blurred::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(113deg, black, rgb(128, 3, 3));
+    border-radius: 100%;
+    transition: 1.7s cubic-bezier(0, 2, 0.61, -0.05);
+}
+
+.blurred > span:nth-of-type(1),
+.blurred > span:nth-of-type(2) {
+    position: absolute;
+    width: 50px;
+    height:50px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(113deg, black, darkred);
+    border-radius: 100%;
+    transition: 1.4s cubic-bezier(0, 2, 0.61, -0.05);
+}
+
+.button:hover .blurred::before {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+}
+
+.button:hover .blurred::after {
+    width: 15px;
+    height: 15px;
+    top: 30px;
+    left: 45px;
+}
+.button:hover .blurred > span:nth-of-type(1) {
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    left: -20px;
+}
+
+.button:hover .blurred > span:nth-of-type(2) {
+    width: 25px;
+    height: 25px;
+    top: 40px;
+    left: -20px;
+}

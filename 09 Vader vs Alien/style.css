@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&family=Ewert&family=Faster+One&family=Fredericka+the+Great&family=Inspiration&family=Nabla&family=Petit+Formal+Script&family=Sancreek&family=Smokum&family=Stint+Ultra+Condensed&display=swap');
+
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.game-container {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Fredericka the Great', sans-serif;
+    background: url('./img/atat-bg.jpg') no-repeat center center/cover;   
+}
+
+.vader {
+    background: url('./img/vader-2.png') no-repeat center center/cover;
+    width: 210px;
+    height: 215px;
+    position: absolute;
+    bottom: 0px;
+    left: 5px; 
+}
+
+.obstacle {
+    background: url('./img/alien.png') no-repeat center center/cover;
+    width: 240px;
+    height: 225px;
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+}
+
+#scoreCount {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.game-over {
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#scoreCount,
+.game-over {
+    color: black;
+    font-weight: bolder;
+    font-size: 55px;
+    text-shadow: 1px 3px 8px rgba(139, 0, 0, 0.837);
+}
+
+.animate-vader {
+    animation: vader-anim 1.5s linear;
+}
+
+@keyframes vader-anim {
+    0% {
+        bottom: 5px;
+    }
+
+    50% {
+        bottom: 422px;
+    }
+
+    100% {
+        bottom: 5px;
+    }
+}
+
+.animate-obstacle {
+    animation: obstacle-anim 5s linear infinite;
+}
+
+@keyframes obstacle-anim {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
+
