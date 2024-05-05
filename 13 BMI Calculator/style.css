@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body{
+    margin: 0;
+    background: linear-gradient(to left bottom, black, darkred);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Righteous, sans-serif;
+}
+
+.container{
+    background: rgba(222, 7, 7, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.3);
+    margin: 5px;
+}
+
+.heading{
+    font-size: 30px;
+}
+
+.input{
+    padding: 10px 20px;
+    font-size: 18px;
+    background: rgba(234, 155, 9, 0.4);
+    border-color: rgba(14, 1, 1, 0.964);
+    margin: 10px;
+}
+
+.btn{
+    background-color: rgb(74, 45, 3);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 20px;
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.btn:hover{
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+    transition: all 300ms ease;
+}
+
+.info-text{
+    font-size: 20px;
+    font-weight: 500;
+}
